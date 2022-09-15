@@ -1,0 +1,14 @@
+matplotlib
+scipy
+scikit-image
+opencv-python
+jax
+jaxlib
+tensorflow
+tensorflow-datasets
+ml_collections
+sporco
+ipdb
+tqdm
+blobfile
+mpi4py
