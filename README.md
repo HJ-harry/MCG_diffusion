@@ -1,8 +1,6 @@
 # Manifold Constrained Gradient Diffusion
 
-This repository contains the official PyTorch implementation of the paper
-
-> Improved Diffusion Models for Inverse Problems using Manifold Constraints
+Official PyTorch implementation of the NeurIPS 2022 paper "[Improving Diffusion Models for Inverse Problems using Manifold Constraints](https://arxiv.org/abs/2206.00941)"
 
 For each task, we additionally provide some re-implementations of diffusion model-based inverse problem solvers.
 
