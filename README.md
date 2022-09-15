@@ -1,8 +1,21 @@
-# Manifold Constrained Gradient Diffusion
+# Improving Diffusion Models for Inverse Problems using Manifold Constraints (NeurIPS 2022)
 
-Official PyTorch implementation of the NeurIPS 2022 paper "[Improving Diffusion Models for Inverse Problems using Manifold Constraints](https://arxiv.org/abs/2206.00941)"
+Official PyTorch implementation of the NeurIPS 2022 paper "[Improving Diffusion Models for Inverse Problems using Manifold Constraints](https://arxiv.org/abs/2206.00941)". Code modified from [guided-diffusion](https://github.com/openai/guided-diffusion) and [score_sde_pytorch](https://github.com/yang-song/score_sde_pytorch).
+
+[![arXiv](https://img.shields.io/badge/arXiv-2206.00941-red)](https://arxiv.org/abs/2206.00941)
+[![arXiv](https://img.shields.io/badge/paper-NeurIPS2022-blue)](https://arxiv.org/abs/2206.00941)
+![concept](./figs/concept.jpg)
+![concept](./figs/results_inpainting.jpg)
+![concept](./figs/results_colorization_CT.jpg)
 
 For each task, we additionally provide some re-implementations of diffusion model-based inverse problem solvers.
+
+> **Improving Diffusion Models for Inverse Problems using Manifold Constraints**<br>
+> [Hyungjin Chung](https://www.hj-chung.com/), Hyungjin Chung, [Jong Chul Ye](https://bispl.weebly.com/professor.html) <br>
+> NeurIPS 2022
+> 
+>**Abstract**: <br>
+Recently, diffusion models have been used to solve various  inverse problems in an unsupervised manner with appropriate modifications to the sampling process. However, the current solvers, which recursively apply a reverse diffusion step followed by a projection-based measurement consistency step, often produce sub-optimal results. By studying the generative sampling path, here we show that current solvers throw the sample path off the data manifold, and hence the error accumulates. To address this, we propose an additional correction term  inspired by the manifold constraint, which  can be used synergistically with the previous solvers to make the iterations close to the manifold. The proposed manifold constraint is straightforward to implement within a few lines of code, yet boosts the performance by a surprisingly large margin. With extensive experiments, we show that our method is superior to the previous methods both theoretically and empirically, producing promising results in many applications such as image inpainting, colorization, and sparse-view computed tomography.
 
 
 ## Getting Started
@@ -66,3 +79,14 @@ python run_CT_recon.py
 We additionally provide our re-implementation of this [paper](https://openreview.net/forum?id=vaRCHVj0uGI). Set `solver='song'`
 when you wish to run the solver introduced in [Song et al.](https://openreview.net/forum?id=vaRCHVj0uGI).
 
+## Citation
+If you find our work interesting, please consider citing
+
+```
+@InProceedings{chung2022improving,
+  title={Improving Diffusion Models for Inverse Problems using Manifold Constraints},
+  author={Chung, Hyungjin and Sim, Byeongsu and Ye, Jong Chul},
+  journal={Advances in Neural Information Processing Systems},
+  year={2022}
+}
+```
